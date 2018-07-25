@@ -14,7 +14,7 @@
                         <span class="addr">{{ item.address }}</span>
                     </template>
                 </el-autocomplete>
-                <el-button type="primary" style="float: right">发布</el-button>
+                <el-button type="primary" style="float: right" @click="release()">发布</el-button>
             </el-col>
         </el-row>
         <!--表格-->
@@ -102,6 +102,16 @@
             },
             handleIconClick(ev) {
                 console.log(ev);
+            },
+            release() {
+                this.$router.push(
+                    { name: 'release'}
+                )
+            },
+            handleClick () {
+                this.$router.push(
+                    { name: 'details'}
+                )
             }
         },
         mounted() {
